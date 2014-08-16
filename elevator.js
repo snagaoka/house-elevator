@@ -4,10 +4,10 @@
 module.exports = {
 	goto: function (currentFloor, nextFloor){
 		
-		return parseInt(nextFloor);
-
+		var newDestination = parseInt(nextFloor) - currentFloor;
+ 
+		return parseInt(newDestination);
 
 	}
-
 
 };
