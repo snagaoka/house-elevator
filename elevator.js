@@ -4,13 +4,21 @@
 module.exports = {
 	goto: function (currentFloor, nextFloor){
 
-		if (currentFloor < 4) {
+		if (typeof currentFloor === 'number' && typeof nextFloor === 'string') {
 
-			if (parseInt(nextFloor) < 4) {
+			if (currentFloor < 4) {
 
-			var newDestination = parseInt(nextFloor) - currentFloor;
-	 
-			return parseInt(newDestination);
+				if (parseInt(nextFloor) < 4) {
+
+				var newDestination = parseInt(nextFloor) - currentFloor;
+		 
+				return parseInt(newDestination);
+
+				} else {
+
+					return 0
+
+				}
 
 			} else {
 
@@ -21,7 +29,6 @@ module.exports = {
 		} else {
 
 			return 0
-
 		}
 
 	}
