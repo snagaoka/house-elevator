@@ -2,9 +2,10 @@
 'use strict';
  
 module.exports = {
-	goto: function (){
+	goto: function (currentFloor, nextFloor){
 		
-	return true;
+		return parseInt(nextFloor);
+
 
 	}
 
